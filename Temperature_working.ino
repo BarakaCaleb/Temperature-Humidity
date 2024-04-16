@@ -9,8 +9,8 @@
 //Declare DHT object:
 DHT dht(DHTPIN, DHTTYPE);
 //Intialize the sensor.
-int myNumb;
-int buzzPin=8;
+//int myNumb;
+//int buzzPin=8;
 int dt=2000; //2 seconds
 
 
