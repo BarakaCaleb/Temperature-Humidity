@@ -11,19 +11,19 @@ DHT dht(DHTPIN, DHTTYPE);
 //Intialize the sensor.
 //int myNumb;
 //int buzzPin=8;
-int dt=2000; //2 seconds
+int dt=3000; //2 seconds
 
 
 
 void setup (){
-  Serial.begin(9600); 
+  Serial.begin(115200); 
   dht.begin();
     pinMode(buzzPin,OUTPUT);
 }
 
 void loop (){
 // delay(300000);
- delay(1000);
+ delay(2000);
 //read humidity
 float humi = dht.readHumidity();
 //read temperature as Celsius
@@ -34,10 +34,10 @@ float tempF = dht.readTemperature(true);
 
 
 //Trigger Sensor
-  if (tempC>30){
-    digitalWrite(buzzPin, HIGH);
-    delay(dt);
-    digitalWrite(buzzPin, LOW);
+  //if (tempC>30){
+    //digitalWrite(buzzPin, HIGH);
+    //delay(dt);
+    //digitalWrite(buzzPin, LOW);
   }
 
 //check if any reads failed
